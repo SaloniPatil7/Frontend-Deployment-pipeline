@@ -14,7 +14,7 @@ function User() {
     const handleSignup = async () => {
         console.log(user); // for now
         try {
-            const res = await fetch(`http://localhost:8080/user/signup`, {
+            const res = await fetch(`http://ec2-16-170-244-14.eu-north-1.compute.amazonaws.com:8080/user/signup`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -13,7 +13,7 @@ function Todo() {
         try {
             setLoading(true);
 
-            const res = await fetch("http://localhost:8080/todo", {
+            const res = await fetch("http://ec2-16-170-244-14.eu-north-1.compute.amazonaws.com:8080/todo", {
                 credentials: "include"
             });
             if (res.status === 401) {
@@ -45,7 +45,7 @@ function Todo() {
 
     const deleteTodo = async (id) => {
         try {
-            const res = await fetch(`http://localhost:8080/todo/${id}`, {
+            const res = await fetch(`http://ec2-16-170-244-14.eu-north-1.compute.amazonaws.com:8080/todo/${id}`, {
                 method: "DELETE",
                 credentials: "include",
             });

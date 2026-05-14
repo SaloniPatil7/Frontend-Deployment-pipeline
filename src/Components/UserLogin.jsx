@@ -16,7 +16,7 @@ function UserLogin() {
          console.log(user);
        
     try {
-        const res = await fetch(`http://localhost:8080/user/login`, {
+        const res = await fetch(`http://ec2-16-170-244-14.eu-north-1.compute.amazonaws.com:8080/user/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -8,7 +8,7 @@ function Add() {
 
     const handleAdd = async () => {
         try {
-            const res = await fetch(`http://localhost:8080/todo`, {
+            const res = await fetch(`http://ec2-16-170-244-14.eu-north-1.compute.amazonaws.com:8080/todo`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

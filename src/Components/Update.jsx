@@ -7,7 +7,7 @@ function Update() {
     const [task, setTask] = useState("");
 
     const fetchTodo = async () => {
-        const res = await fetch(`http://localhost:8080/todo/${id}`, {
+        const res = await fetch(`http://ec2-16-170-244-14.eu-north-1.compute.amazonaws.com:8080/todo/${id}`, {
             credentials: "include",
         });
         const data = await res.json();
@@ -20,7 +20,7 @@ function Update() {
 
 
     const handleUpdate = async () => {
-        await fetch(`http://localhost:8080/todo/${id}`, {
+        await fetch(`http://ec2-16-170-244-14.eu-north-1.compute.amazonaws.com:8080/todo/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
